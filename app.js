@@ -54,6 +54,13 @@ app.get('/extract/current-account/agency/account', function(req, res, next) {
             "type": "Debit",
             "value": 40.12
           },
+					{
+            "date": "2017-01-02",
+            "description": "Country Wine",
+            "document": "string",
+            "type": "Debit",
+            "value": 924.40
+          },
           {
             "date": "2017-01-01",
             "description": "Eduardo Pedroso",
