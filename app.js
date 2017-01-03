@@ -77,5 +77,21 @@ app.get('/extract/current-account/agency/account', function(req, res, next) {
   res.send(response);
 })
 
+// Balance
+app.get('/balance/current-account/agency/account', function(req, res, next) {
+	let response = {
+		"data": {
+			"available": 8000,
+			"blocked": 0,
+			"partial": 0,
+			"restricted": 0,
+			"securedAccountLimit": 0,
+			"totalCharge": 0
+		},
+		"error": {}
+	}
+  res.send(response);
+})
+
 // Aplicação disponível em http://127.0.0.1:3000/
 app.listen(process.env.PORT || 3000);
