@@ -246,50 +246,50 @@ app.post('/transfer/ted/third-party', function(req, res, next) {
     res.send(response);
   }
 })
-})
 
 //TED Same ownership
 app.post('/transfer/ted/same-ownership', function(req, res, next) {
-	let response = {
-    "data": {
-      "identifier": 0
-    },
-    "error": {}
+  if((!req.body.date || !req.body.debit || !req.body.credit || !req.body.bank || !req.body.beneficiary || !req.body.value || !req.body.password || !req.body.purpose)){
+    res.send("Invalid Request");
+  } else {
+    let response = {
+      "data": {
+        "identifier": 0
+      },
+      "error": {}
+    }
+    res.send(response);
   }
-  res.send(response);
-})
-
-//TED Thrid Part
-app.post('/transfer/ted/third-party', function(req, res, next) {
-	let response = {
-    "data": {
-      "identifier": 0
-    },
-    "error": {}
-  }
-  res.send(response);
 })
 
 //DOC Same ownership
 app.post('/transfer/doc/same-ownership', function(req, res, next) {
-	let response = {
-    "data": {
-      "identifier": 0
-    },
-    "error": {}
+  if((!req.body.date || !req.body.debit || !req.body.credit || !req.body.bank || !req.body.beneficiary || !req.body.value || !req.body.password || !req.body.purpose)){
+    res.send("Invalid Request");
+  } else {
+    let response = {
+      "data": {
+        "identifier": 0
+      },
+      "error": {}
+    }
+    res.send(response);
   }
-  res.send(response);
 })
 
 //DOC Thrid Part
 app.post('/transfer/doc/third-party', function(req, res, next) {
-	let response = {
-    "data": {
-      "identifier": 0
-    },
-    "error": {}
+  if((!req.body.date || !req.body.debit || !req.body.credit || !req.body.bank || !req.body.beneficiary || !req.body.value || !req.body.password || !req.body.purpose)){
+    res.send("Invalid Request");
+  } else {
+    let response = {
+      "data": {
+        "identifier": 0
+      },
+      "error": {}
+    }
+    res.send(response);
   }
-  res.send(response);
 })
 
 //Token Client
