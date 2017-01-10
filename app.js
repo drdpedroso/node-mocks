@@ -315,9 +315,34 @@ app.post('/token/client/synchronize', function(req, res, next) {
   res.send(response);
 })
 
+//Change eletronic Password 
+app.post('/password/change/electronic', function(req, res, next) {
+	let response = {};
+  res.send(response);
+})
 
+//Change bankline Password 
+app.post('/password/change/bankline', function(req, res, next) {
+	let response = {};
+  res.send(response);
+})
 
+//Change unique Password 
+app.post('/password/change/unique', function(req, res, next) {
+	let response = {};
+  res.send(response);
+})
 
+//Recover Password 
+app.post('/password/recover', function(req, res, next) {
+	let response = {
+    "data": {
+      "password": "faustop"
+    },
+    "error": {}
+  };
+  res.send(response);
+})
 
 // Aplicação disponível em http://127.0.0.1:3000/
 app.listen(process.env.PORT || 3000);
