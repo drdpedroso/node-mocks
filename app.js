@@ -14,7 +14,7 @@ app.get('/', function(req, res) {
 
 // Authentication (Login)
 app.post('/oauth/token', function(req, res, next) {
-  if( !(req.body.username || req.body.username)){
+  if((!req.body.username || !req.body.password)){
     res.send("Invalid Request");
   } else {
     let response = {
@@ -219,13 +219,18 @@ app.get('/balance/investment/agency/account', function(req, res, next) {
 
 //Internal Transfer
 app.post('/transfer/internal-transfer', function(req, res, next) {
-	let response = {
-    "data": {
-      "identifier": 0
-    },
-    "error": {}
+  debugger;
+  if((!req.body.date || !req.body.document || !req.body.debit || !req.body.credit || !req.body.value || !req.body.history || !req.body.password)){
+    res.send("Invalid Request");
+  } else {
+    let response = {
+      "data": {
+        "identifier": 0
+      },
+      "error": {}
+    }
+    res.send(response);
   }
-  res.send(response);
 })
 
 //TED Thrid Part
