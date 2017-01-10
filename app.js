@@ -279,6 +279,43 @@ app.post('/transfer/doc/third-party', function(req, res, next) {
   res.send(response);
 })
 
+//Token Client
+app.get('/token/client/', function(req, res, next) {
+	let response = {
+    "data": {
+      "status": "string",
+      "attributionDate": "2017-01-09",
+      "expirationDate": "2017-01-09",
+      "serial": "string",
+      "type": "C",
+      "lockDate": "2017-01-09",
+      "activationId": 0,
+      "activationPassword": 0
+    },
+    "error": {}
+  }
+  res.send(response);
+})
+
+//Unblock Client Token
+app.post('/token/client/unblock', function(req, res, next) {
+	let response = {};
+  res.send(response);
+})
+
+//Block Client Token
+app.post('/token/client/block', function(req, res, next) {
+	let response = {};
+  res.send(response);
+})
+
+//Synchronize Client Token
+app.post('/token/client/synchronize', function(req, res, next) {
+	let response = {};
+  res.send(response);
+})
+
+
 
 
 
