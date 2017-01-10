@@ -219,8 +219,7 @@ app.get('/balance/investment/agency/account', function(req, res, next) {
 
 //Internal Transfer
 app.post('/transfer/internal-transfer', function(req, res, next) {
-  debugger;
-  if((!req.body.date || !req.body.document || !req.body.debit || !req.body.credit || !req.body.value || !req.body.history || !req.body.password)){
+  if((!req.body.date || !req.body.document || !req.body.debit || !req.body.credit || !req.body.value || !req.body.password)){
     res.send("Invalid Request");
   } else {
     let response = {
@@ -235,13 +234,18 @@ app.post('/transfer/internal-transfer', function(req, res, next) {
 
 //TED Thrid Part
 app.post('/transfer/ted/third-party', function(req, res, next) {
-	let response = {
-    "data": {
-      "identifier": 0
-    },
-    "error": {}
+  if((!req.body.date || !req.body.debit || !req.body.credit || !req.body.bank || !req.body.beneficiary || !req.body.value || !req.body.password)){
+    res.send("Invalid Request");
+  } else {
+    let response = {
+      "data": {
+        "identifier": 0
+      },
+      "error": {}
+    }
+    res.send(response);
   }
-  res.send(response);
+})
 })
 
 //TED Same ownership
