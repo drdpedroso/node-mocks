@@ -23,7 +23,7 @@ app.post('/oauth/token', function(req, res, next) {
   res.send(response);
 })
 
-// Extract
+// Extract Current Account
 app.get('/extract/current-account/agency/account', function(req, res, next) {
 	let response = {
       "data": {
@@ -86,7 +86,7 @@ app.get('/extract/current-account/agency/account', function(req, res, next) {
   res.send(response);
 })
 
-// Balance
+// Extract Investment
 app.get('/extract/investment/agency/account', function(req, res, next) {
 	let response = {
       "data": {
@@ -149,7 +149,7 @@ app.get('/extract/investment/agency/account', function(req, res, next) {
   res.send(response);
 })
 
-// Balance
+// Balance Current Account
 app.get('/balance/current-account/agency/account', function(req, res, next) {
 	let response = {
 		"data": {
@@ -165,7 +165,7 @@ app.get('/balance/current-account/agency/account', function(req, res, next) {
   res.send(response);
 })
 
-// Balance
+// Balance Investment
 app.get('/balance/investment/agency/account', function(req, res, next) {
 	let response = {
     "data": {
@@ -212,6 +212,75 @@ app.get('/balance/investment/agency/account', function(req, res, next) {
   }
   res.send(response);
 })
+
+//Internal Transfer
+app.post('/transfer/internal-transfer', function(req, res, next) {
+	let response = {
+    "data": {
+      "identifier": 0
+    },
+    "error": {}
+  }
+  res.send(response);
+})
+
+//TED Thrid Part
+app.post('/transfer/ted/third-party', function(req, res, next) {
+	let response = {
+    "data": {
+      "identifier": 0
+    },
+    "error": {}
+  }
+  res.send(response);
+})
+
+//TED Same ownership
+app.post('/transfer/ted/same-ownership', function(req, res, next) {
+	let response = {
+    "data": {
+      "identifier": 0
+    },
+    "error": {}
+  }
+  res.send(response);
+})
+
+//TED Thrid Part
+app.post('/transfer/ted/third-party', function(req, res, next) {
+	let response = {
+    "data": {
+      "identifier": 0
+    },
+    "error": {}
+  }
+  res.send(response);
+})
+
+//DOC Same ownership
+app.post('/transfer/doc/same-ownership', function(req, res, next) {
+	let response = {
+    "data": {
+      "identifier": 0
+    },
+    "error": {}
+  }
+  res.send(response);
+})
+
+//DOC Thrid Part
+app.post('/transfer/doc/third-party', function(req, res, next) {
+	let response = {
+    "data": {
+      "identifier": 0
+    },
+    "error": {}
+  }
+  res.send(response);
+})
+
+
+
 
 // Aplicação disponível em http://127.0.0.1:3000/
 app.listen(process.env.PORT || 3000);
