@@ -183,16 +183,48 @@ app.get('/balance/current-account/agency/account', function(req, res, next) {
 // Balance
 app.get('/balance/investment/agency/account', function(req, res, next) {
 	let response = {
-		"data": {
-			"available": 8456,
-			"blocked": 210,
-			"partial": 0,
-			"restricted": 0,
-			"securedAccountLimit": 0,
-			"totalCharge": 0
-		},
-		"error": {}
-	}
+    "data": {
+      "presentBalance": {
+        "grossTotalBalance": 1000,
+        "incomeTax": 20,
+        "netTotalBalance": 0,
+        "taxFinancialTransactions": 0,
+        "totalProfitability": 0
+      },
+      "futureBalance": {
+        "grossTotalBalance":2000,
+        "incomeTax": 12,
+        "netTotalBalance": 0,
+        "taxFinancialTransactions": 0,
+        "totalProfitability": 0
+      },
+      "products": [
+        {
+          "code": "string",
+          "description": "string",
+          "dueDate": "2017-01-09",
+          "index": "string",
+          "indexPercentage": 0,
+          "product": "string",
+          "rate": 0,
+          "startDate": "2017-01-09",
+          "presentStartValue": 0,
+          "presentGrossValue": 0,
+          "presentNetValue": 0,
+          "presentTaxFinancialTransactionsValue": 0,
+          "presentIncomeTaxValue": 0,
+          "presenteProfitabilityValue": 0,
+          "futureStartValue": 0,
+          "futureGrossValue": 0,
+          "futureTaxFinancialTransactionsValue": 0,
+          "futureNetValue": 0,
+          "futureIncomeTaxValue": 0,
+          "futureProfitabilityValue": 0
+        }
+      ]
+    },
+  "error": {}
+  }
   res.send(response);
 })
 
