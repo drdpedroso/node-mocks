@@ -87,21 +87,6 @@ app.get('/extract/current-account/agency/account', function(req, res, next) {
 })
 
 // Balance
-app.get('/balance/investment/agency/account', function(req, res, next) {
-	let response = {
-		"data": {
-			"available": 4570,
-			"blocked": 0,
-			"partial": 0,
-			"restricted": 0,
-			"securedAccountLimit": 0,
-			"totalCharge": 0
-		},
-		"error": {}
-	}
-  res.send(response);
-})
-
 app.get('/extract/investment/agency/account', function(req, res, next) {
 	let response = {
       "data": {
