@@ -14,13 +14,17 @@ app.get('/', function(req, res) {
 
 // Authentication (Login)
 app.post('/oauth/token', function(req, res, next) {
-	let response = {
-		"access_token": "dh2931hud1dh91hd921j",
-		"expires_in": "string",
-		"scope": "string",
-		"token_type": "string"
+  if( !(req.body.username || req.body.username)){
+    res.send("Invalid Request");
+  } else {
+    let response = {
+      "access_token": "dh2931hud1dh91hd921j",
+      "expires_in": "string",
+      "scope": "string",
+      "token_type": "string"
+    }
+    res.send(response);
   }
-  res.send(response);
 })
 
 // Extract Current Account
