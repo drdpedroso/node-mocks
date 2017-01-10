@@ -15,7 +15,7 @@ app.get('/', function(req, res) {
 // Authentication (Login)
 app.post('/oauth/token', function(req, res, next) {
   if((!req.body.username || !req.body.password)){
-    res.send("Invalid Request");
+    res.sendStatus(400);
   } else {
     let response = {
       "access_token": "dh2931hud1dh91hd921j",
@@ -220,7 +220,7 @@ app.get('/balance/investment/agency/account', function(req, res, next) {
 //Internal Transfer
 app.post('/transfer/internal-transfer', function(req, res, next) {
   if((!req.body.date || !req.body.document || !req.body.debit || !req.body.credit || !req.body.value || !req.body.password)){
-    res.send("Invalid Request");
+    res.sendStatus(400);
   } else {
     let response = {
       "data": {
@@ -235,7 +235,7 @@ app.post('/transfer/internal-transfer', function(req, res, next) {
 //TED Thrid Part
 app.post('/transfer/ted/third-party', function(req, res, next) {
   if((!req.body.date || !req.body.debit || !req.body.credit || !req.body.bank || !req.body.beneficiary || !req.body.value || !req.body.password)){
-    res.send("Invalid Request");
+    res.sendStatus(400);
   } else {
     let response = {
       "data": {
@@ -250,7 +250,7 @@ app.post('/transfer/ted/third-party', function(req, res, next) {
 //TED Same ownership
 app.post('/transfer/ted/same-ownership', function(req, res, next) {
   if((!req.body.date || !req.body.debit || !req.body.credit || !req.body.bank || !req.body.beneficiary || !req.body.value || !req.body.password || !req.body.purpose)){
-    res.send("Invalid Request");
+    res.sendStatus(400);
   } else {
     let response = {
       "data": {
@@ -265,7 +265,7 @@ app.post('/transfer/ted/same-ownership', function(req, res, next) {
 //DOC Same ownership
 app.post('/transfer/doc/same-ownership', function(req, res, next) {
   if((!req.body.date || !req.body.debit || !req.body.credit || !req.body.bank || !req.body.beneficiary || !req.body.value || !req.body.password || !req.body.purpose)){
-    res.send("Invalid Request");
+    res.sendStatus(400);
   } else {
     let response = {
       "data": {
@@ -280,7 +280,7 @@ app.post('/transfer/doc/same-ownership', function(req, res, next) {
 //DOC Thrid Part
 app.post('/transfer/doc/third-party', function(req, res, next) {
   if((!req.body.date || !req.body.debit || !req.body.credit || !req.body.bank || !req.body.beneficiary || !req.body.value || !req.body.password || !req.body.purpose)){
-    res.send("Invalid Request");
+    res.sendStatus(400);
   } else {
     let response = {
       "data": {
