@@ -355,5 +355,39 @@ app.post('/password/recover', function (req, res, next) {
     res.send(response);
 })
 
+//Payment
+app.post('/payment', function (req, res, next) {
+    let response = {
+        "data": {
+            "identifier": 0
+        },
+        "error": {}
+    };
+    res.send(response);
+})
+
+app.post('/decode', function (req, res, next) {
+    let response = {
+        "paymentDate": "2017-01-13",
+        "dueDate": "2017-01-13",
+        "value": 500,
+        "barcode": "da456dsa645dsa6d65sa456d4a5",
+        "beneficiary": {
+            "name": "Eduardo Skywalker",
+            "document": "44926584402",
+            "personType": "PF"
+        },
+        "drawee": {
+            "agency": 1010,
+            "account": 54866,
+            "type": 0
+        },
+        "history": "string",
+        "password": "string"
+    }
+    res.send(response);
+})
+
+
 // Aplicação disponível em http://127.0.0.1:3000/
 app.listen(process.env.PORT || 3000);
