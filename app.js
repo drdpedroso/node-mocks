@@ -383,8 +383,7 @@ app.post('/decode', function (req, res, next) {
                 "account": 54866,
                 "type": 0
             },
-            "history": "string",
-            "password": "string"
+            "history": "string"
         }
     }
     res.send(response);
