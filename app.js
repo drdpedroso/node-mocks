@@ -368,7 +368,7 @@ app.post('/payment', function (req, res, next) {
 
 app.post('/decode', function (req, res, next) {
     let response = {
-        "data":{
+        "data": {
             "paymentDate": "2017-01-13",
             "dueDate": "2017-01-13",
             "value": 500,
