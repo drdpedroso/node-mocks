@@ -155,7 +155,7 @@ app.get('/extract/investment/agency/account', function (req, res, next) {
                     "document": "string",
                     "type": "Debit",
                     "value": 100.00
-                },
+                }
             ],
             "lastBalance": {
                 "date": "2017-01-02",
