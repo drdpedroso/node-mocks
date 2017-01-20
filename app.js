@@ -80,6 +80,20 @@ app.get('/extract/current-account/agency/account', function (req, res, next) {
                     "type": "Balance",
                     "value": 119.00
                 },
+                {
+                    "date": "2016-12-01",
+                    "description": "Los Polos Hermanos",
+                    "document": "string",
+                    "type": "Credit",
+                    "value": 80.00
+                },
+                {
+                    "date": "2016-12-01",
+                    "description": "Baile funk",
+                    "document": "string",
+                    "type": "Debit",
+                    "value": 100.00
+                }
             ],
             "lastBalance": {
                 "date": "2017-01-02",
