@@ -245,9 +245,9 @@ app.get('/balance/investment/agency/account', function (req, res, next) {
 
 //Internal Transfer
 app.post('/transfer/internal-transfer', function (req, res, next) {
-    if ((!req.body.date || !req.body.document || !req.body.debit || !req.body.credit || !req.body.value || !req.body.password)) {
-        res.sendStatus(400);
-    } else {
+    // if ((!req.body.date || !req.body.document || !req.body.debit || !req.body.credit || !req.body.value || !req.body.password)) {
+    //     res.sendStatus(400);
+    // } else {
         let response = {
             "data": {
                 "identifier": 0
@@ -255,7 +255,7 @@ app.post('/transfer/internal-transfer', function (req, res, next) {
             "error": {}
         }
         res.send(response);
-    }
+    // }
 })
 
 //TED Thrid Part
