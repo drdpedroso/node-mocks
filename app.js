@@ -11,7 +11,16 @@ app.use(cors());
 
 // Definir a route principal
 app.get('/', function (req, res) {
-    res.send('IBK Mocks');
+    const response = {
+        "/": {
+            "addressAutocomplete": true,
+            "footerSocialMedia": false
+        },
+        "/checkout": {
+            "mandatoryComplement": true
+        }
+    }
+    res.send(response);
 });
 
 // Authentication (Login)
